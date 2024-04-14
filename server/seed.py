@@ -42,15 +42,9 @@ with app.app_context():
     restaurants = [Restaurant(name=data['name'], address=data['address']) for data in restaurant_data]
     db.session.add_all(restaurants)
     db.session.commit()
-    
-    db.session.add_all(restaurants)
-    db.session.commit()
 
 
     pizzas = [Pizza(name=pizza['name'], ingredients=pizza['ingredients']) for pizza in pizza_types]
-    db.session.add_all(pizzas)
-    db.session.commit()
-
     db.session.add_all(pizzas)
     db.session.commit()
 
